@@ -18,12 +18,16 @@ output "public_subnet_ids" {
   value = "${aws_subnet.demo_subnet_public.*.id}"
 }
 
+output "public_subnet_cidr_blocks" {
+  value = "${aws_subnet.demo_subnet_public.*.cidr_block}"
+}
+
 output "db_subnet_ids" {
   value = "${aws_subnet.demo_subnet_db.*.id}"
 }
 
-output "public_subnet_cidr_blocks" {
-  value = "${aws_subnet.demo_subnet_public.*.cidr_block}"
+output "db_subnet_cidr_blocks" {
+  value = "${aws_subnet.demo_subnet_db.*.cidr_block}"
 }
 
 output "nat_gateway_ids" {
