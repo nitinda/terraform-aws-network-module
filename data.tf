@@ -1,0 +1,1 @@
+data "aws_availability_zones" "demo_available" {}
