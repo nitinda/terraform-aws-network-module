@@ -24,6 +24,11 @@ variable "db_subnets_cidr" {
   type        = "list"
 }
 
+variable "availability_zone" {
+  description = "The AZ for the subnet."
+  type        = "list"
+}
+
 # Tags
 variable common_tags {
   description = "Resources Tags"
