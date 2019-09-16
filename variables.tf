@@ -24,7 +24,7 @@ variable "db_subnets_cidr" {
   type        = "list"
 }
 
-variable "availability_zone" {
+variable "availability_zones" {
   description = "The AZ for the subnet."
   type        = "list"
 }
