@@ -9,7 +9,7 @@ resource "aws_route_table" "demo_route_table_public" {
   }
 
   tags = "${merge(var.common_tags, map(
-    "Name", "terraform-demo-route-table-public",z
+    "Name", "terraform-demo-route-table-public",
   ))}"
 }
 
