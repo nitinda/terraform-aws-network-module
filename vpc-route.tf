@@ -9,7 +9,7 @@ resource "aws_route_table" "demo_route_table_public" {
   }
 
   tags = "${merge(var.common_tags, map(
-    "Name", "terraform-demo-ecs-route-table-public",
+    "Name", "terraform-demo-route-table-public",z
   ))}"
 }
 
@@ -28,7 +28,7 @@ resource "aws_route_table" "demo_route_table_private" {
   vpc_id = "${aws_vpc.demo_vpc.id}"
 
   tags = "${merge(var.common_tags, map(
-    "Name", "terraform-demo-ecs-route-table-private-${count.index}",
+    "Name", "terraform-demo-route-table-private-${count.index}",
   ))}"
 }
 
@@ -55,7 +55,7 @@ resource "aws_route_table" "demo_route_table_db" {
   vpc_id = "${aws_vpc.demo_vpc.id}"
 
   tags = "${merge(var.common_tags, map(
-    "Name", "terraform-demo-ecs-route-table-db",
+    "Name", "terraform-demo-route-table-db",
   ))}"
 }
 
