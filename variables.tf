@@ -6,7 +6,6 @@ variable "domain_name_servers" {
 
 variable "domain_name" {
   description = "The suffix domain name to use by default when resolving non Fully Qualified Domain Names."
-  type        = "list"
 }
 
 # VPC ########################################
