@@ -1,7 +1,7 @@
 
 ### Public Route Table
 resource "aws_route_table" "demo_route_table_public" {
-  count  = "${length(var.public_subnets_cidr) != "" ? 1 : 0}"
+  count  = "${length(var.public_subnets_cidr) != 0 ? 1 : 0}"
   vpc_id = "${aws_vpc.demo_vpc.id}"
   route {
     cidr_block = "0.0.0.0/0"
