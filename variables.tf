@@ -1,3 +1,14 @@
+# DHCP Option
+variable "domain_name_servers" {
+  description = "List of name servers to configure in /etc/resolv.conf."
+  type        = "list"
+}
+
+variable "domain_name" {
+  description = "The suffix domain name to use by default when resolving non Fully Qualified Domain Names."
+  type        = "list"
+}
+
 # VPC 
 variable "cidr_block" {
   description = "The CIDR block for the VPC."
