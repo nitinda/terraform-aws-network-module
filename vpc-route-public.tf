@@ -7,9 +7,7 @@ resource "aws_route_table" "demo_route_table_public" {
     cidr_block = "0.0.0.0/0"
     gateway_id = "${aws_internet_gateway.demo_internet_gateway.id}"
   }
-  tags = "${merge(var.common_tags, map(
-    "Name", "terraform-demo-route-table-public",
-  ))}"
+  tags = "${merge(var.common_tags, map("Name", "${var.tag_name_prefix}-route-table-public",))}"
 }
 
 ### Public Route Table Associaion

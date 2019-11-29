@@ -1,7 +1,4 @@
 resource "aws_internet_gateway" "demo_internet_gateway" {
   vpc_id = "${aws_vpc.demo_vpc.id}"
-
-  tags = "${merge(var.common_tags, map(
-    "Name", "terraform-demo-internet-gateway",
-  ))}"
+  tags   = "${merge(var.common_tags, map("Name", "${var.tag_name_prefix}-internet-gateway",))}"
 }

@@ -2,10 +2,7 @@
 resource "aws_route_table" "demo_route_table_private" {
   count  = "${length(var.private_subnets_cidr)}"
   vpc_id = "${aws_vpc.demo_vpc.id}"
-
-  tags = "${merge(var.common_tags, map(
-    "Name", "terraform-demo-route-table-private-${count.index}",
-  ))}"
+  tags   = "${merge(var.common_tags, map("Name", "${var.tag_name_prefix}-route-table-private-${count.index}",))}"
 }
 
 ### Private Route
