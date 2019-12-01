@@ -25,16 +25,20 @@ From branch : **_terrform-11/master_**
 
 - **_VPC and other resources_** *(Terraform 11 supported code)*
 
-From branch : **_terrform-12/master_** *work in progress*
-
-- **_VPC and other resources_** *(Terraform 12 supported code - work in progres)*
 
 
 ---
 
 ## Below are the resources that are launched by this module
 
-- **_VPC and other resources_**
+- **_VPC_**
+- **_Internet Gatway_**
+- **_Subnets_**
+- **_Route Tables_**
+- **_Route Tables Rules_**
+- **_DHCP Option_**
+- **_Nat Gateway_**
+
 
 
 ---
@@ -64,14 +68,18 @@ The variables required in order for the module to be successfully called from th
 
 
 
-Details are in respective branch.
 
 
 ## Outputs
 
-
-
-Details are in respective branch.
+- **_vpc\_id_**
+- **_vpc\_cidr_**
+- **_web\_subnet\_ids_**
+- **_web\_subnet\_cidr_**
+- **_public\_subnet\_ids_**
+- **_public\_subnet\_cidr_**
+- **_db\_subnet\_ids_**
+- **_db\_subnet\_cidr_**
 
 
 ### Usage
