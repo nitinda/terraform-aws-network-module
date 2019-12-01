@@ -34,7 +34,14 @@ From branch : **_terrform-12/master_** *work in progress*
 
 ## Below are the resources that are launched by this module
 
-- **_VPC and other resources_**
+- **_VPC_**
+- **_Internet Gatway_**
+- **_Subnets_**
+- **_Route Tables_**
+- **_Route Tables Rules_**
+- **_DHCP Option_**
+- **_Nat Gateway_**
+
 
 
 ---
