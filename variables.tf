@@ -1,7 +1,7 @@
 # DHCP Option #####################################
 variable "domain_name_servers" {
   description = "List of name servers to configure in /etc/resolv.conf."
-  type        = "list"
+  type        = list(string)
 }
 
 variable "domain_name" {
@@ -15,36 +15,37 @@ variable "cidr_block" {
 
 variable "enable_dns_hostnames" {
   description = "description"
-  default = "A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false"
+  default     = "A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false"
 }
 
 # Subnet #####################################
 variable "public_subnets_cidr" {
   description = "The CIDR block for the subnet."
-  type        = "list"
+  type        = list(string)
 }
 
 variable "private_subnets_cidr" {
   description = "The CIDR block for the subnet."
-  type        = "list"
+  type        = list(string)
 }
 
 variable "db_subnets_cidr" {
   description = "The CIDR block for the subnet."
-  type        = "list"
+  type        = list(string)
 }
 
 variable "availability_zones" {
   description = "The AZ for the subnet."
-  type        = "list"
+  type        = list(string)
 }
 
 # Tags ###################################
-variable common_tags {
+variable "common_tags" {
   description = "Resources Tags"
-  type = "map"
+  type        = map(string)
 }
 
 variable "tag_name_prefix" {
   description = "Resources Name Tag prefix"
 }
+
