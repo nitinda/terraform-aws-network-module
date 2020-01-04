@@ -10,7 +10,7 @@ This module may be used to create **_VPC and other resources_** in AWS cloud pro
 
 ## Prerequisites
 
-This module needs Terraform 0.11.14 or newer.
+This module needs **_Terraform 0.11.14_** or newer.
 You can download the latest Terraform version from [here](https://www.terraform.io/downloads.html).
 
 This module deploys aws services details are in respective feature branches.
@@ -20,8 +20,6 @@ This module deploys aws services details are in respective feature branches.
 ## Features Branches
 
 Below we are able to check the resources that are being created as part of this module call:
-
-From branch : **_terrform-11/master_**
 
 - **_VPC and other resources_** *(Terraform 11 supported code)*
 
@@ -51,9 +49,23 @@ To use this module, add the following call to your code:
 
 ```tf
 module "<layer>-network-<AccountID>" {
-  source = "git::https://github.com/nitinda/terraform-module-aws-network.git?ref=master"
+  source = "git::https://github.com/nitinda/terraform-module-aws-network.git?ref=terraform-11/master"
 
+  providers = {
+    aws = "aws.services"
+  }
 
+  cidr_block           = "10.30.0.0/16"
+  enable_dns_hostnames = true
+
+  # Subnet
+  public_subnets_cidr  = ["10.30.1.0/24", "10.30.2.0/24"]
+  private_subnets_cidr = ["10.30.3.0/24", "10.30.4.0/24"]
+  db_subnets_cidr      = ["10.30.5.0/24", "10.30.6.0/24"]
+  availability_zones   = ["eu-central-1a", "eu-central-1b"]
+
+  # Tags
+  common_tags = "${var.common_tags}"
 }
 ```
 ---
