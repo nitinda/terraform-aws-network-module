@@ -1,4 +1,4 @@
-resource "aws_eip" "demo_epi" {
+resource "aws_eip" "epi" {
   count = length(var.private_subnets_cidr)
   vpc   = true
   tags = merge(
@@ -9,11 +9,11 @@ resource "aws_eip" "demo_epi" {
   )
 }
 
-resource "aws_nat_gateway" "demo_nat_gateway" {
+resource "aws_nat_gateway" "nat_gateway" {
   count         = length(var.private_subnets_cidr)
-  allocation_id = aws_eip.demo_epi[count.index].id
-  subnet_id     = aws_subnet.demo_subnet_public[count.index].id
-  depends_on    = [aws_internet_gateway.demo_internet_gateway]
+  allocation_id = aws_eip.epi[count.index].id
+  subnet_id     = aws_subnet.subnet_public[count.index].id
+  depends_on    = [aws_internet_gateway.internet_gateway]
   tags = merge(
     var.common_tags,
     {

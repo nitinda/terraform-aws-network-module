@@ -63,9 +63,9 @@ module "<layer>-network-<AccountID>" {
 The variables required in order for the module to be successfully called from the deployment repository are the following:
 
 
-|         **_Variable_**        |            **_Description_**             |   **_Type_**   |
-|-------------------------------|------------------------------------------|----------------|
-
+|**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
+|:----|:----|-----:|-----:|
+| **_name_** | The name of the role | _string_ | **_Required_** |
 
 
 
