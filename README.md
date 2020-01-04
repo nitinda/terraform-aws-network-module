@@ -87,10 +87,10 @@ The variables required in order for the module to be successfully called from th
 | **_domain\_name_** | The suffix domain name to use by default when resolving non Fully Qualified Domain Names | _string_ | **_Required_** |
 | **_cidr\_block_** | The CIDR block for the VPC | _string_ | **_Required_** |
 | **_enable\_dns\_hostnames_** | A boolean flag to enable/disable DNS hostnames in the VPC. | _string_ | **_Required_** |
-| **_public\_subnets\_cidr_** | The CIDR block for the subnet | _string_ | **_Required_** |
-| **_private\_subnets\_cidr_** | The CIDR block for the subnet | _string_ | **_Required_** |
-| **_db\_subnets\_cidr_** | The CIDR block for the subnet | _string_ | **_Required_** |
-| **_availability\_zones_** | The AZ for the subnet | _string_ | **_Required_** |
+| **_public\_subnets\_cidr_** | The CIDR block for the subnet | _list(string)_ | **_Required_** |
+| **_private\_subnets\_cidr_** | The CIDR block for the subnet | _list(string)_ | **_Required_** |
+| **_db\_subnets\_cidr_** | The CIDR block for the subnet | _list(string)_ | **_Required_** |
+| **_availability\_zones_** | The AZ for the subnet | _list(string)_ | **_Required_** |
 | **_common\_tags_** | Resources Tags | _string_ | **_Required_** |
 | **_tag\_name\_prefix_** | Resources Name Tag prefix | _string_ | **_Required_** |
 
