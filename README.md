@@ -51,8 +51,28 @@ To use this module, add the following call to your code:
 
 ```tf
 module "<layer>-network-<AccountID>" {
-  source = "git::https://github.com/nitinda/terraform-module-aws-network.git?ref=master"
+  source = "git::https://github.com/nitinda/terraform-module-aws-network.git?ref=terraform-12/master"
 
+  providers = {
+    aws = aws.services
+  }
+
+  cidr_block           = "10.30.0.0/16"
+  enable_dns_hostnames = true
+
+  # Subnet
+  public_subnets_cidr  = ["10.30.1.0/24", "10.30.2.0/24"]
+  private_subnets_cidr = ["10.30.3.0/24", "10.30.4.0/24"]
+  db_subnets_cidr      = ["10.30.5.0/24", "10.30.6.0/24"]
+  availability_zones   = ["eu-central-1a", "eu-central-1b"]
+
+  # DHCP
+  domain_name         = "eu-central-1.compute.internal"
+  domain_name_servers = ["AmazonProvidedDNS"]
+
+  # Tags
+  common_tags = var.common_tags
+  tag_name_prefix = "ec2-monitoring"
 
 }
 ```
@@ -65,7 +85,16 @@ The variables required in order for the module to be successfully called from th
 
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
 |:----|:----|-----:|-----:|
-| **_name_** | The name of the role | _string_ | **_Required_** |
+| **_domain\_name\_servers_** | List of name servers to configure in /etc/resolv.conf | _list(string)_ | **_Required_** |
+| **_domain\_name_** | The suffix domain name to use by default when resolving non Fully Qualified Domain Names | _string_ | **_Required_** |
+| **_cidr\_block_** | The CIDR block for the VPC | _string_ | **_Required_** |
+| **_enable\_dns\_hostnames_** | A boolean flag to enable/disable DNS hostnames in the VPC. | _string_ | **_Required_** |
+| **_public\_subnets\_cidr_** | The CIDR block for the subnet | _string_ | **_Required_** |
+| **_private\_subnets\_cidr_** | The CIDR block for the subnet | _string_ | **_Required_** |
+| **_db\_subnets\_cidr_** | The CIDR block for the subnet | _string_ | **_Required_** |
+| **_availability\_zones_** | The AZ for the subnet | _string_ | **_Required_** |
+| **_common\_tags_** | Resources Tags | _string_ | **_Required_** |
+| **_tag\_name\_prefix_** | Resources Name Tag prefix | _string_ | **_Required_** |
 
 
 
