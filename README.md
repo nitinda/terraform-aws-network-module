@@ -22,9 +22,7 @@ This module deploys aws services details are in respective feature branches.
 Below we are able to check the resources that are being created as part of this module call:
 
 
-From branch : **_terrform-12/master_** *work in progress*
-
-- **_VPC and other resources_** *(Terraform 12 supported code - work in progres)*
+- **_VPC and other resources_** *(Terraform 12 supported code)*
 
 
 ---
