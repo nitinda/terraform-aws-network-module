@@ -14,8 +14,7 @@ variable "cidr_block" {
 }
 
 variable "enable_dns_hostnames" {
-  description = "description"
-  default     = "A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false"
+  description = "A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false"
 }
 
 # Subnet #####################################
