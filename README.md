@@ -10,7 +10,7 @@ This module may be used to create **_VPC and other resources_** in AWS cloud pro
 
 ## Prerequisites
 
-This module needs Terraform 0.11.14 or newer.
+This module needs **_Terraform 0.11.14_** or newer.
 You can download the latest Terraform version from [here](https://www.terraform.io/downloads.html).
 
 This module deploys aws services details are in respective feature branches.
@@ -25,9 +25,9 @@ From branch : **_terrform-11/master_**
 
 - **_VPC and other resources_** *(Terraform 11 supported code)*
 
-From branch : **_terrform-12/master_** *work in progress*
+From branch : **_terrform-12/master_**
 
-- **_VPC and other resources_** *(Terraform 12 supported code - work in progres)*
+- **_VPC and other resources_** *(Terraform 12 supported code)*
 
 
 ---
