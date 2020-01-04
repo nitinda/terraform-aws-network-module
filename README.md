@@ -21,11 +21,11 @@ This module deploys aws services details are in respective feature branches.
 
 Below we are able to check the resources that are being created as part of this module call:
 
-From branch : **_terrform-11/master_**
+From branch : **_terraform-11/master_**
 
 - **_VPC and other resources_** *(Terraform 11 supported code)*
 
-From branch : **_terrform-12/master_**
+From branch : **_terraform-12/master_**
 
 - **_VPC and other resources_** *(Terraform 12 supported code)*
 
