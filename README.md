@@ -91,7 +91,7 @@ The variables required in order for the module to be successfully called from th
 | **_private\_subnets\_cidr_** | The CIDR block for the subnet | _list(string)_ | **_Required_** |
 | **_db\_subnets\_cidr_** | The CIDR block for the subnet | _list(string)_ | **_Required_** |
 | **_availability\_zones_** | The AZ for the subnet | _list(string)_ | **_Required_** |
-| **_common\_tags_** | Resources Tags | _string_ | **_Required_** |
+| **_common\_tags_** | Resources Tags | _map(string)_ | **_Required_** |
 | **_tag\_name\_prefix_** | Resources Name Tag prefix | _string_ | **_Required_** |
 
 
