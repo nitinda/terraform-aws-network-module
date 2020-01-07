@@ -31,6 +31,7 @@ variable "private_subnets_cidr" {
 variable "db_subnets_cidr" {
   description = "The CIDR block for the subnet."
   type        = list(string)
+  default     = []
 }
 
 variable "availability_zones" {
