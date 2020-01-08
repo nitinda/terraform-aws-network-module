@@ -83,8 +83,8 @@ The variables required in order for the module to be successfully called from th
 
 |**_Variable_** | **_Description_** | **_Type_** | **_Argument Status_** |
 |:----|:----|-----:|-----:|
-| **_domain\_name\_servers_** | List of name servers to configure in /etc/resolv.conf | _list(string)_ | **_Required_** |
-| **_domain\_name_** | The suffix domain name to use by default when resolving non Fully Qualified Domain Names | _string_ | **_Required_** |
+| **_domain\_name\_servers_** | List of name servers to configure in /etc/resolv.conf | _list(string)_ | **_Optional_** |
+| **_domain\_name_** | The suffix domain name to use by default when resolving non Fully Qualified Domain Names | _string_ | **_Optional_** |
 | **_cidr\_block_** | The CIDR block for the VPC | _string_ | **_Required_** |
 | **_enable\_dns\_hostnames_** | A boolean flag to enable/disable DNS hostnames in the VPC. | _string_ | **_Required_** |
 | **_public\_subnets\_cidr_** | The CIDR block for the subnet | _list(string)_ | **_Required_** |
