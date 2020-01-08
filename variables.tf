@@ -2,10 +2,12 @@
 variable "domain_name_servers" {
   description = "List of name servers to configure in /etc/resolv.conf."
   type        = list(string)
+  default     = []
 }
 
 variable "domain_name" {
   description = "The suffix domain name to use by default when resolving non Fully Qualified Domain Names."
+  default     = ""
 }
 
 # VPC ########################################
