@@ -12,7 +12,7 @@ resource "aws_route_table" "route_table_private" {
 
 ### Private Route
 resource "aws_route" "route_private" {
-  count                  = length(var.private_subnets_cidr) != 0 ? 1 : 0
+  count                  = length(var.private_subnets_cidr) != 0 ? length(var.private_subnets_cidr) : 0
   route_table_id         = aws_route_table.route_table_private[count.index].id
   destination_cidr_block = "0.0.0.0/0"
   nat_gateway_id         = aws_nat_gateway.nat_gateway[count.index].id
